@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //---------------------------------Task 1------------------------------
+         var date= new Date()
+         document.write(date);
+        //---------------------------------Task 2-----------------------------
+        var month = new Date()
+        var show = month.getMonth()
+        var arr= ['jan','feb','mar','apr','may','jun','july','aug','sep','oct','nov','December']
+        for (let i = 0; i < 12; i++) {
+          if (i == show) {
+        alert("Current month: "+arr[i]);
+            break
+          }
+        }
+        //---------------------------------Task 4-----------------------------
+        var d= new Date()
+        var date = d.getDay()
+        console.log(date);
+        var arr=['sun','mon','tue','wed','thur','fri','Sat',]
+        for (let i = 0; i < 7; i++) {
+           if (date== i) {
+            alert('Today is '+arr[i])
+            break
+           } else{
+            if (date== arr[0] || arr[6] ) {
+                console.log('ok');
+            }
+           }
+           
+        }
+        // //---------------------------------Task 5------------------------------
+         var d= new Date()
+        var date = d.getDay()
+       
+        var arr=['sun','mon','tue','wed','thur','fri','Sat',]
+      for (let i = 0; i < 7; i++) {
+
+           if (date== i) {
+            alert('Its a work day'+arr[i])
+        
+           }
+           if (date == 0 || 6 ) {
+               document.write('So Its Fun day');
+                break
+            }
+           }
+           
+        //---------------------------------Task 6------------------------------
+        var m = new Date()
+        var d= m.getDate()
+        for (let i = 0; i < 30; i++) {
+           if (d > 15) {
+            console.log("Last fifteen days of the month");
+            break
+           }else{
+            console.log("First fifteen days of the month");
+            break
+
+           }
+            
+        }
+        //---------------------------------Task 7------------------------------
+  
+        var date = new Date();
+         console.log("Current Date and Time: " + date);
+         
+         var milliSec = date.getTime();
+         console.log("Milliseconds since January 1, 1970: " + milliSec);
+         
+         var getMinutes = milliSec / (1000 * 60);
+         console.log("Minutes since January 1, 1970: " + getMinutes);
+
+       // ---------------------------------Task 8------------------------------
+        var date = new Date();
+        var hour = date.getHours();
+        console.log(hour);
+
+            if (hour > 12) {
+                console.log('It\'s PM');
+            } else {
+                console.log('It\'s AM');
+            }
+
+
+        //---------------------------------Task 9------------------------------
+
+        var Laterdate = new Date(2020, 11, 31)
+        console.log(Laterdate);
+        //---------------------------------Task 10------------------------------
+
+         var ramadanStartDate = new Date(2015, 5, 18); // Month is zero-based, so 5 is June
+         
+         var currentDate = new Date();
+                 console.log(currentDate );
+         
+         // Calculate the difference in milliseconds
+         var timeDifference = currentDate - ramadanStartDate;
+         console.log(timeDifference );
+         
+         // Convert milliseconds to days
+         var daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+         
+         // Display the result
+         alert("Number of days passed since 1st Ramadan: " + daysPassed);
+
+
+        //---------------------------------Task 11------------------------------
+        var currentDate = new Date();
+        
+        // Extract the hours
+        var currentHours = currentDate.getHours();
+
+        // Reset the date object an hour ahead
+        currentDate.setHours(currentHours - 1);
+
+        // Display the updated date object in the browser
+        document.write("<h2>Updated Date Object</h2>");
+        document.write("<p>Original Date: " + new Date() + "</p>");
+        document.write("<p>1 hour ago,it was  : " + currentDate + "</p>");
+
+        //---------------------------------Task 12------------------------------
+          // Create a Date object for the current date and time
+        var currentDate = new Date();
+        
+        // Extract the hours
+        var currentYear = currentDate.getFullYear();
+
+        // Reset the date object an hour ahead
+        currentDate.setFullYear(currentHours - 100);
+
+        // Display the updated date object in the browser
+        document.write("<h2>Updated Date Object</h2>");
+        document.write("<p>Original Date: " + new Date() + "</p>");
+        document.write("<p>100 year back, it was  : " + currentDate + "</p>");
+        //---------------------------------Task 13------------------------------
+        // Ask the user about their age
+        var age = prompt("Enter your age:");
+
+        // Calculate birth year
+        var currentYear = new Date().getFullYear();
+        var birthYear = currentYear - age;
+
+        // Display the result in the browser
+        document.write("<h2>Your Birth Year</h2>");
+        document.write("<p>Your age: " + age + " years</p>");
+        document.write("<p>Your birth year: " + birthYear + "</p>");
+
+      //---------------------------------Task 14------------------------------
+       var CustomerName = 'Hassan'
+       var CurrentMonth = 'February'
+             
+        var  Totalunits = prompt('is month k units btao')
+        var  perunit = 16
+        var WithinDueDate=  Totalunits * perunit
+        var WithinDueDate= Math.round(WithinDueDate*100) / 100
+        var Surcharge = 350
+        var GrossAmountPayable= WithinDueDate + Surcharge
+
+        console.log(WithinDueDate);
+        console.log(WithinDueDate);
+        console.log(GrossAmountPayable)
+
+
+
+        document.write('<h1>K-Electric Bill</h1>' )
+        document.write('<br>' )
+        document.write(' Customer Name : ' , CustomerName)
+        document.write('<br>' )
+
+        document.write('Current Month : ', CurrentMonth)
+        document.write('<br>' )
+
+        document.write('Charges per unit : ' , perunit)
+        document.write('<br>' )
+        document.write('<br>' )
+        document.write('Net Amount Payable (within Due Date) : ', WithinDueDate)
+        document.write('<br>' )
+        document.write('Late Payment Surcharge : ' , Surcharge)
+        document.write('Gross Amount Payable (after Due Date) : ', GrossAmountPayable)
+
+    </script>
+</body>
+</html>
